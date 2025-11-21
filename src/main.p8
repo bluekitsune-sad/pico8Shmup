@@ -1,11 +1,11 @@
 function _init()
 	speed = 0
-	x,y = 63,63
+	shipx,shipy = 63,63
 end
 
 function _draw()
 	cls()
-	spr(1,x,y)
+	spr(1,shipx,shipy)
 end
 
 function _update()
@@ -17,12 +17,12 @@ function _update()
 		speed = 2
 	end
 	
-	x=x+speed
+	shipx=shipx+speed
 	
-	if x>=120 then
-		x = 0
+	if shipx>=120 then
+		shipx = 0
 	end
-	if x<=0 then
-		x = 120
+	if shipx<=0 then
+		shipx = 120
 	end
 end
