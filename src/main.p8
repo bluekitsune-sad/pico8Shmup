@@ -1,5 +1,5 @@
 function _init()
-	speed = 0
+	speedx,speedy = 0,0
 	shipx,shipy = 63,63
 end
 
@@ -9,15 +9,23 @@ function _draw()
 end
 
 function _update()
-	speed = 0
+	speedx= 0
+	speedy= 0
 	if btn(0) then
-		speed = -2
+		speedx = -2
 	end
 	if btn(1) then
-		speed = 2
+		speedx = 2
+	end
+	if btn(2) then
+		speedy = -2
+	end
+	if btn(3) then
+		speedy = 2
 	end
 	
-	shipx=shipx+speed
+	shipx=shipx+speedx
+	shipy=shipy+speedy
 	
 	if shipx>=120 then
 		shipx = 0
