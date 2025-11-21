@@ -20,9 +20,9 @@ function _update()
 	x=x+speed
 	
 	if x>=120 then
-		x = 120
+		x = 0
 	end
 	if x<=0 then
-		x = 0
+		x = 120
 	end
 end
